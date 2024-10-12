@@ -3,10 +3,10 @@ import BackgroundNoise from '@/components/background-noise'
 const ShadowFill = ({ character }: { character: string }) => {
   return (
     <>
-      {Array(24)
+      {Array(20)
         .fill('')
         .map((_, i) => (
-          <span key={`row-${character}-${i}`}>{character.repeat(60)}</span>
+          <span key={`row-${character}-${i}`}>{character.repeat(40)}</span>
         ))}
     </>
   )
@@ -23,7 +23,7 @@ const ASCIIShadows = () => {
       </div>
       <div
         aria-hidden="true"
-        className="font-shadow absolute left-5 top-5 -z-20 flex h-full w-full flex-col overflow-hidden bg-gray-800 leading-[26px] tracking-[0.5px] text-gray-300 sm:left-10 sm:top-10 sm:text-gray-400"
+        className="font-shadow absolute left-5 top-5 -z-20 flex h-full w-full flex-col overflow-hidden bg-transparent leading-[26px] tracking-[0.5px] text-gray-300 sm:left-10 sm:top-10 sm:text-gray-400"
       >
         <ShadowFill character="░" />
       </div>
@@ -34,7 +34,6 @@ const ASCIIShadows = () => {
 export default function Home() {
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center bg-gray-900 p-8 font-mono">
-      <BackgroundNoise />
       <section className="relative z-10 mb-5 mr-5 flex max-w-[550px] flex-col bg-black sm:mb-10 sm:mr-10 lg:mr-0">
         <div className="flex items-center justify-center gap-2 border-4 border-white bg-black p-2 text-black">
           <div className="flex-1 gap-2 bg-white">
@@ -87,6 +86,7 @@ export default function Home() {
         </div>
         <ASCIIShadows />
       </section>
+      <BackgroundNoise />
     </main>
   )
 }

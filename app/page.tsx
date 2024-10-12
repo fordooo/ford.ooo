@@ -1,3 +1,5 @@
+import BackgroundNoise from '@/components/background-noise'
+
 const ShadowFill = ({ character }: { character: string }) => {
   return (
     <>
@@ -32,6 +34,7 @@ const ASCIIShadows = () => {
 export default function Home() {
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center bg-gray-900 p-8 font-mono">
+      <BackgroundNoise />
       <section className="relative z-10 mb-5 mr-5 flex max-w-[550px] flex-col bg-black sm:mb-10 sm:mr-10 lg:mr-0">
         <div className="flex items-center justify-center gap-2 border-4 border-white bg-black p-2 text-black">
           <div className="flex-1 gap-2 bg-white">

@@ -17,13 +17,13 @@ const ASCIIShadows = () => {
     <>
       <div
         aria-hidden="true"
-        className="font-shadow absolute left-5 top-5 -z-10 hidden h-full w-full flex-col overflow-hidden bg-gray-800 leading-[26px] tracking-[0.5px] text-gray-300 sm:flex"
+        className="absolute left-5 top-5 -z-10 hidden h-full w-full flex-col overflow-hidden bg-gray-800 font-shadow leading-[26px] tracking-[0.5px] text-gray-300 sm:flex"
       >
         <ShadowFill character="▒" />
       </div>
       <div
         aria-hidden="true"
-        className="font-shadow absolute left-5 top-5 -z-20 flex h-full w-full flex-col overflow-hidden bg-transparent leading-[26px] tracking-[0.5px] text-gray-300 sm:left-10 sm:top-10 sm:text-gray-400"
+        className="absolute left-5 top-5 -z-20 flex h-full w-full flex-col overflow-hidden bg-transparent font-shadow leading-[26px] tracking-[0.5px] text-gray-300 sm:left-10 sm:top-10 sm:text-gray-400"
       >
         <ShadowFill character="░" />
       </div>
@@ -78,7 +78,7 @@ export default function Home() {
             </span>
             <a
               className="transition-transform-colors duration-300 hover:-rotate-3 hover:text-slate-400"
-              href="#"
+              href="mailto:aaron@aaronford.net"
             >
               Email
             </a>

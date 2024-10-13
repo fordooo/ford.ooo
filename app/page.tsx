@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center bg-gray-900 p-8 font-mono">
       <section className="relative z-10 mb-5 mr-5 flex max-w-[550px] flex-col bg-black sm:mb-10 sm:mr-10 lg:mr-0">
-        <div className="flex items-center justify-center gap-2 border-4 border-white bg-black p-2 text-black">
+        <div className="flex items-center gap-2 border-4 border-white bg-black p-2 text-black">
           <div className="flex-1 gap-2 bg-white">
             <h1 className="px-2 py-1 text-lg font-bold leading-5">
               aaron_ford
@@ -45,7 +45,7 @@ export default function Home() {
             <p className="px-2 py-1 text-lg font-bold leading-5">×</p>
           </div>
         </div>
-        <div className="flex flex-1 flex-col gap-4 border-4 border-t-0 border-white bg-black px-4 py-8 text-sm">
+        <div className="flex flex-col gap-4 border-4 border-t-0 border-white bg-black px-4 py-8 text-sm">
           <p>
             Howdy! I&apos;m Aaron, a front-end developer and all-around web
             enthusiast living in the Pacific Northwest.

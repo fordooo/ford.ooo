@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono } from 'next/font/google'
 
+import { siteConfig } from '@/config/site'
+
 import './globals.css'
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -9,11 +11,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-imb-plex-mono',
 })
 
-const title = 'Aaron Ford | Front-End Developer'
-const description =
-  "Howdy! I'm Aaron, a front-end developer and all-around web enthusiast living in the Pacific Northwest."
-const url = 'https://ford.ooo'
-const siteName = 'ford.ooo'
+const { title, description, url, siteName } = siteConfig
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),

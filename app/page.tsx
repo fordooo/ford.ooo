@@ -6,7 +6,7 @@ const ShadowFill = ({ character }: { character: string }) => {
       {Array(20)
         .fill('')
         .map((_, i) => (
-          <span key={`row-${character}-${i}`}>{character.repeat(40)}</span>
+          <span key={`row-${character}-${i}`}>{character.repeat(66)}</span>
         ))}
     </>
   )

@@ -15,11 +15,11 @@ const config: Config = {
       fontFamily: {
         shadow: [
           'var(--font-imb-plex-mono)',
-          'Times',
           'Times New Roman',
-          'Georgia',
-          'Liberation Serif',
-          'serif',
+          'Monaco',
+          'Menlo',
+          '"Courier New"',
+          'monospace',
         ],
         mono: [
           'var(--font-imb-plex-mono)',

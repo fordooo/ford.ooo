@@ -24,7 +24,7 @@ const links = [
     hoverClass: 'hover:text-purple-400',
   },
   {
-    href: 'mailto:aaron@aaronford.net',
+    href: 'mailto:aaron@ford.ooo',
     label: 'Email',
     hoverClass: 'hover:text-slate-400',
   },

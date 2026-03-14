@@ -1,13 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: rgb(17 24 39);
-  --foreground: #ffffff;
+@theme {
+  --color-background: rgb(17 24 39);
+  --color-foreground: #ffffff;
+}
+
+@theme inline {
+  --font-shadow: var(--font-ibm-plex-mono), "Times New Roman", Monaco, Menlo,
+    "Courier New", monospace;
+  --font-mono: var(--font-ibm-plex-mono), Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
 }

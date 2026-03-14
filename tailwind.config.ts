@@ -14,7 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         shadow: [
-          'var(--font-imb-plex-mono)',
+          'var(--font-ibm-plex-mono)',
           'Times New Roman',
           'Monaco',
           'Menlo',
@@ -22,7 +22,7 @@ const config: Config = {
           'monospace',
         ],
         mono: [
-          'var(--font-imb-plex-mono)',
+          'var(--font-ibm-plex-mono)',
           'Menlo',
           'Monaco',
           'Consolas',

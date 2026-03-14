@@ -8,7 +8,7 @@ import './globals.css'
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
-  variable: '--font-imb-plex-mono',
+  variable: '--font-ibm-plex-mono',
 })
 
 const { title, description, url, siteName } = siteConfig
@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: ['/images/og-image.png'],
   },
 }
 

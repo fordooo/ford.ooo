@@ -38,14 +38,27 @@ const links = [
   },
 ]
 
+const FAVICON_COUNT = 8
+const cycleFavicon = (indexRef: React.MutableRefObject<number>) => {
+  indexRef.current = (indexRef.current % FAVICON_COUNT) + 1
+  document
+    .querySelectorAll<HTMLLinkElement>("link[rel='icon']")
+    .forEach((link) => {
+      link.href = `/images/favicon-${indexRef.current}.png`
+    })
+}
+
 export default function Home() {
   const sectionRef = useRef<HTMLElement>(null)
   const [physicsActive, setPhysicsActive] = useState(false)
   const ctrlRef = useRef<PixelPhysicsCtrl | null>(null)
+  const faviconIndexRef = useRef(0)
 
   const handleClose = useCallback(() => {
     const el = sectionRef.current
     if (!el) return
+
+    cycleFavicon(faviconIndexRef)
 
     el.animate(
       [

@@ -11,6 +11,12 @@
   pointer-events: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .noise {
+    animation: none;
+  }
+}
+
 @keyframes noise {
   0%,
   to {

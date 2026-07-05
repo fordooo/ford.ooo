@@ -25,16 +25,19 @@ const links = [
     href: 'https://www.linkedin.com/in/aaronford/',
     label: 'LinkedIn',
     hoverClass: 'hover:text-blue-400',
+    focusClass: 'focus-visible:text-blue-400',
   },
   {
     href: 'https://github.com/fordooo',
     label: 'GitHub',
     hoverClass: 'hover:text-purple-400',
+    focusClass: 'focus-visible:text-purple-400',
   },
   {
     href: 'mailto:aaron@ford.ooo',
     label: 'Email',
     hoverClass: 'hover:text-amber-400',
+    focusClass: 'focus-visible:text-amber-400',
   },
 ]
 
@@ -97,7 +100,7 @@ export default function Home() {
             <button
               id="close"
               onClick={handleClose}
-              className="cursor-pointer px-2 py-1 text-lg leading-5 font-bold"
+              className="relative cursor-pointer px-2 py-1 text-lg leading-5 font-bold after:absolute after:-inset-x-2.5 after:-inset-y-2 after:content-['']"
               aria-label="Close"
             >
               ×
@@ -116,13 +119,13 @@ export default function Home() {
             new things.
           </p>
           <p className="mt-4">Feel free to connect:</p>
-          <nav className="flex items-center gap-2">
-            {links.map(({ href, label, hoverClass }, i) => (
+          <nav aria-label="Social links" className="flex items-center gap-2">
+            {links.map(({ href, label, hoverClass, focusClass }, i) => (
               <Fragment key={label}>
                 <span className={`group ${hoverClass}`}>
                   <a
                     href={href}
-                    className="inline-block transition-transform duration-300 group-hover:-rotate-3"
+                    className={`-mx-1 -my-3 inline-block px-1 py-3 transition-transform duration-300 group-hover:-rotate-3 focus-visible:-rotate-3 ${focusClass}`}
                   >
                     {label}
                   </a>

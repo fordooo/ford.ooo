@@ -11,12 +11,15 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-ibm-plex-mono',
 })
 
-const { title, description, url, siteName } = siteConfig
+const { title, description, url, siteName, person } = siteConfig
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title,
     description,
@@ -41,6 +44,15 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: person.name,
+  jobTitle: person.jobTitle,
+  url,
+  sameAs: person.sameAs,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,7 +60,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ibmPlexMono.variable}>{children}</body>
+      <body className={ibmPlexMono.variable}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
